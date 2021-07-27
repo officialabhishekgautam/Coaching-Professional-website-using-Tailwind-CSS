@@ -16,10 +16,10 @@
        
     </head>
     <body>
-    <div class="container flex flex-col" x-data="{open: false}">
-        <div class="container fixed">
+    <div class="flex flex-col w-screen" x-data="{open: false}">
+        <div class="fixed w-screen">
             <div class="flex flex-row absolute transform translate-x-full transition ease-out duration-200 right-0 h-screen w-0 invisible overflow-hidden"
-             :class="{'translate-x-0':open === true, 'w-full': open === true, 'translate-x-full': open === false, 'w-0': open === false, 'invisible': open === false,}">
+             :class="{'translate-x-0 w-full visible': open === true, 'invisible w-0 translate-x-full opacity-0': open === false, }">
             <div class="h-screen w-0" @click="open = false"
             :class="{ 'w-1/4': open === true, 'w-0': open === false,}"></div>
             <div class="flex flex-row right-0 h-screen bg-white fixed shadow-2xl justify-between w-3/4 fixed"
@@ -68,7 +68,7 @@
         </div>
         
         
-        <div class="bg-fixed bg-repeat-y object-contain h-full" style="background-image: url('img1.jpg');">
+        <div class="bg-fixed bg-repeat-y object-cover w-full h-full" style="background-image: url('img1.jpg');">
             <div class="flex flex-col justify-center items-center space-y-6 mt-48 mb-16 md:mb-36 xl:mb-48">
                 <div class="text-xs md:text-xl tracking-widest text-center" style="font-family: 'Hammersmith One', sans-serif;">AMBITION IS THE FIRST STEP TOWARDS</div>
                 <div class="text-4xl md:text-8xl tracking-widest" style="font-family: 'Montserrat', sans-serif;">SUCCESS</div>
@@ -79,7 +79,7 @@
                     font-family: 'Quicksand', sans-serif;">Book Now</button>
                 </div>
             </div>
-            <div class="container">
+            <div class="w-full">
                 <div class="flex flex-col xl:flex-row w-full">
                     <div class="flex flex-col bg-white justify-center items-center xl:justify-start xl:items-start w-full xl:w-1/2 px-8 md:px-16 xl:pl-48 space-y-8 md:space-y-12">
                         <div class="bg-black h-0.5 w-12 rounded mt-16"></div>
@@ -100,7 +100,7 @@
                     <div class="w-full xl:w-1/2 bg-white p-8 sm:16 xl:p-0"><img src="img2.jpg"></div>
                 </div>
             </div>
-            <div class="container">
+            <div class="w-full">
                 <div class="flex flex-col w-full justify-center items-center space-y-8 md:space-y-12 overflow-x-auto">
                     <div class="bg-black h-0.5 w-12 rounded mt-16"></div>
                     <div class="text-xl md:text-4xl tracking-widest leading-relaxed text-center"  style="font-family: 'Montserrat', sans-serif;">HOW CAN I<br>HELP YOU</div>
@@ -169,7 +169,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="w-full">
                 <div class="flex flex-col-reverse xl:flex-row w-full">
                     <div class="flex flex-col bg-white justify-center items-center xl:justify-start xl:items-start w-full xl:w-1/2 pl-16 pr-16 xl:pl-48 space-y-8 xl:space-y-12">
                         <div class="bg-black h-0.5 w-12 rounded mt-16"></div>
